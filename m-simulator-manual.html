@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地下鉄線ミニシュミレーション操作説明</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #black;
+            margin-top: 0px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        .start-btn { background-color: #4CAF50; }
+        .stop-btn { background-color: #d32f2f; }
+        .slider-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .start-btn:hover {
+            background-color: #00994d;
+        }
+        .stop-btn:hover {
+            background-color: #b3000f;
+        }
+        .notice {
+            font-size: 14px;
+            color: #black;
+            margin-top: 20px;
+        }
+        .f-12{
+           font-size: 10px; 
+           margin-top: -16px; 
+        }
+        .n-style{
+           font-size: 10px; 
+           color:#555 ;
+           margin-bottom: 0px;
+           line-height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>地下鉄線ミニシュミレーション操作説明</h1>
+    <p>ミニシュミレーションでは以下のことができます。</p>
+    
+    <h2>【操作方法】</h2>
+    <p><strong>発車ボタン(緑)：</strong>「発車」をクリックすると地下鉄が発車します。</p>
+    <p><strong>停車ボタン(赤)：</strong>「停車」をクリックすると地下鉄が停車します。</p>
+    <p><strong>速度調節スライダー：</strong>スライダーを左右に動かすと、加速・減速します。</p>
+    
+    <h2>【操作画面例】</h2>
+    <div class="button-container">
+        <button class="button start-btn">発車</button>
+        <button class="button stop-btn">停車</button>
+    </div>
+    
+    <div class="slider-container">
+        <input type="range" min="0" max="100" value="50">
+        <p>現在の速度(s)：<span id="speed">(例：10)</span><br><div class="f-12">実際はスライドすると速度が変わります。</div></p>
+    </div>
+    
+    <h2>【画面説明】</h2>
+    <p><strong>発車ボタン(緑)：</strong>車両を発車できます。</p>
+    <p><strong>停車ボタン(赤)：</strong>車両を停車できます。</p>
+    <p><strong>速度調節スライダー：</strong>速度を調節できます。</p>
+    <p><strong>速度表示(s)：</strong>現在の速度が表示されます。</p>
+    
+    <h2>【注意点】</h2>
+    <p class="notice">※速度調節は電車の停車中のみ可能です。</p>
+    <p class="notice">※速度調節後は一度自動で発車します。その後、停車が可能です。<br>
+    　停車後は、発車も可能です。</p>
+    
+    <p class="n-style">※ページを再度読み込むと路線が変わります。(選択不可・ランダム表示)<br>※速度調節後、一度消えるのは仕様です。予めご了承ください<br>※操作画面は一例です。実際の画面と異なる場合があります。</p>
+    
+</body>
+</html>
