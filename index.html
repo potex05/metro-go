@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>運行情報：丸ノ内線 運行情報</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <img src="" alt="路線ロゴ" />
+            <h1 class="title"></h1>
+        </div>
+
+        <div class="update-time">最終更新: 2068年4月15日 12:30</div>
+        <div class="info-box">
+            <p class="unten-status">
+                <img src="https://www.tokyometro.jp/library/common/img/unkou/icon_unkou_shuuryou.png" alt="運終アイコン" />
+                運行終了
+            </p>
+            <div class="status">現在は運行終了しています。</div>
+        </div>
+
+        <h2 class="u-style">過去の運行履歴（1週間分）</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>発生日</th>
+                    <th>発生時刻</th>
+                    <th>発生区間</th>
+                    <th>原因【状況】</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScriptでデータを動的に追加 -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Subway Animation -->
+    <div class="v2_js-fTtrain">
+        <div class="train" onclick="window.open('m-simulator-manual.html', '別ウィンドウ', 'width=650,height=780'); return false;"></div>
+    </div>
+
+    <details>
+        <summary>
+            <p class="t-unten">Copyright © Metropolitan Subway Co., Ltd All rights reserved.</p>
+        </summary>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="button-container">
+                <button id="startButton" class="start-button">発車</button>
+                <button id="stopButton" class="stop-button">停車</button>
+            </div>
+
+            <div class="speed-container">
+                <span>加速</span>
+                <input type="range" id="speedControl" min="2" max="20" value="10" />
+                <span>減速</span>
+                <span id="speedValue">10s</span>
+            </div>
+        </div>
+    </details>
+
+    <script src="script.js"></script>
+</body>
+</html>
